@@ -97,7 +97,6 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
       };
     }
 
-    // Direct user to Game Guide Briefing before entering the game
     setPendingProfile(prof);
     setShowProfileModal(false);
     setShowGuideModal(true);
@@ -123,7 +122,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           {/* Official SMPN SATU ATAP SITUGEDE Logo */}
           <div className="w-12 h-12 rounded-xl bg-stone-900/90 border border-emerald-500/40 p-1 flex items-center justify-center shadow-lg shrink-0">
             <img
-              src="https://githubusercontent.com"
+              src="./logo_satap_situgede__2__96121c49.png"
               alt="Logo Resmi SMPN Satu Atap Situgede"
               referrerPolicy="no-referrer"
               className="w-full h-full object-contain drop-shadow"
@@ -147,14 +146,13 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
 
         {/* Music Player & Audio Controls */}
         <div className="flex items-center gap-2">
-          {/* Trendy Music Player Component */}
           <TrendyMusicPlayer isMuted={isMuted} onToggleMute={onToggleMute} />
         </div>
       </header>
 
       {/* Main Content Area */}
       <main className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 py-5 flex flex-col items-center text-center my-auto">
-        {/* Class Level Selector Bar (Bebas Memilih Kelas 7, 8, 9) */}
+        {/* Class Level Selector Bar */}
         <div className="mb-5 w-full max-w-2xl">
           <div className="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-2 flex items-center justify-center gap-2">
             <span>PILIH TINGKAT KELAS KAMU:</span>
@@ -240,7 +238,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
         {/* Dynamic Title Lockup with School Logo Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-xs font-medium mb-3">
           <img
-            src="/assets/aistudio/logo_satap_situgede__2__96121c49.png"
+            src="./logo_satap_situgede__2__96121c49.png"
             alt="Emblem Situgede"
             referrerPolicy="no-referrer"
             className="w-4 h-4 object-contain inline-block"
@@ -259,7 +257,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           {activeCurriculum.themeSubtitle}
         </p>
 
-        {/* Action Buttons: Solo/Team CTA + Petunjuk Permainan + Class Leaderboard */}
+        {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
           <button
             type="button"
@@ -299,7 +297,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           </button>
         </div>
 
-        {/* 3 Pos Cards Preview for Active Curriculum */}
+        {/* 3 Pos Cards Preview */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-8 w-full max-w-3xl text-left">
           <div className="p-4 rounded-xl bg-stone-900/70 border border-stone-800 backdrop-blur-sm">
             <div className="flex items-center gap-2 text-emerald-400 font-semibold text-sm mb-1">
@@ -358,7 +356,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           </div>
           <div className="text-stone-300 flex items-center gap-2">
             <img
-              src="/assets/aistudio/logo_satap_situgede__2__96121c49.png"
+              src="./logo_satap_situgede__2__96121c49.png"
               alt="Logo"
               referrerPolicy="no-referrer"
               className="w-4 h-4 object-contain inline-block"
@@ -370,14 +368,14 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
         </div>
       </footer>
 
-      {/* Modal Masuk Petualang (Student / Team Profile) */}
+      {/* Modal Masuk Petualang */}
       {showProfileModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-sm animate-fade-in">
           <div className="relative w-full max-w-lg bg-stone-900 border border-stone-700 rounded-2xl p-5 sm:p-6 shadow-2xl max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center gap-2">
                 <img
-                  src="/assets/aistudio/logo_satap_situgede__2__96121c49.png"
+                  src="./logo_satap_situgede__2__96121c49.png"
                   alt="Logo SMPN Satu Atap Situgede"
                   referrerPolicy="no-referrer"
                   className="w-6 h-6 object-contain"
@@ -574,12 +572,11 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
         </div>
       )}
 
-      {/* Petunjuk Permainan Modal (Game Instructions Briefing) */}
+      {/* Petunjuk Permainan Modal */}
       <PetunjukPermainanModal
         isOpen={showGuideModal}
         onClose={() => {
           setShowGuideModal(false);
-          // If cancelled during pre-game briefing, return user to profile modal
           if (pendingProfile) {
             setShowProfileModal(true);
           }
