@@ -97,8 +97,8 @@ export const ClassLeaderboardModal: React.FC<ClassLeaderboardModalProps> = ({
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-stone-900 border border-emerald-500/40 p-0.5 flex items-center justify-center shrink-0">
               <img
-                src="/assets/aistudio/logo_satap_situgede__2__96121c49.png"
-                alt="Logo Resmi SMPN Satu Atap Situgede"
+                src={`${import.meta.env.BASE_URL}assets/aistudio/logo_satap_situgede___2__96121c49.png`}
+				alt="Logo Resmi SMPN Satu Atap Situgede"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain"
               />

@@ -123,7 +123,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           {/* Official SMPN SATU ATAP SITUGEDE Logo */}
           <div className="w-12 h-12 rounded-xl bg-stone-900/90 border border-emerald-500/40 p-1 flex items-center justify-center shadow-lg shrink-0">
             <img
-              src="/assets/aistudio/logo_satap_situgede__2__96121c49.png"
+              src="https://githubusercontent.com"
               alt="Logo Resmi SMPN Satu Atap Situgede"
               referrerPolicy="no-referrer"
               className="w-full h-full object-contain drop-shadow"

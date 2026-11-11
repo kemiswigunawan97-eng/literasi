@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
+import { kirimNilaiSiswa } from './api'; // Pastikan path-nya sesuai dengan lokasi file api.ts
 import React, { useState, useEffect, useRef } from 'react';
 import confetti from 'canvas-confetti';
 import { Award, Printer, RotateCcw, CheckCircle, XCircle, Search, Sparkles, Users } from 'lucide-react';
@@ -147,6 +147,21 @@ export const VictoryScreen: React.FC<VictoryScreenProps> = ({
     };
 
     onRecordScore(entry);
+
+    // ==========================================
+    // KODE INTEGRASI GOOGLE SHEETS
+    // ==========================================
+    const simpanKeGoogleSheets = async () => {
+      try {
+        await kirimNilaiSiswa(displayName, profile.grade, nilaiSkala100);
+        console.log('Data berhasil dikirim ke Google Sheets!');
+      } catch (error) {
+        console.error('Gagal mengirim data ke Google Sheets:', error);
+      }
+    };
+    
+    simpanKeGoogleSheets(); 
+    // ==========================================
 
     return () => clearTimeout(timer);
   }, []);
