@@ -122,7 +122,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           {/* Official SMPN SATU ATAP SITUGEDE Logo */}
           <div className="w-12 h-12 rounded-xl bg-stone-900/90 border border-emerald-500/40 p-1 flex items-center justify-center shadow-lg shrink-0">
             <img
-              src="./logo_satap_situgede__2__96121c49.png"
+              src="/logo_satap_situgede__2__96121c49.png"
               alt="Logo Resmi SMPN Satu Atap Situgede"
               referrerPolicy="no-referrer"
               className="w-full h-full object-contain drop-shadow"
@@ -238,7 +238,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
         {/* Dynamic Title Lockup with School Logo Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-300 text-xs font-medium mb-3">
           <img
-            src="./logo_satap_situgede__2__96121c49.png"
+            src="/logo_satap_situgede__2__96121c49.png"
             alt="Emblem Situgede"
             referrerPolicy="no-referrer"
             className="w-4 h-4 object-contain inline-block"
@@ -356,7 +356,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           </div>
           <div className="text-stone-300 flex items-center gap-2">
             <img
-              src="./logo_satap_situgede__2__96121c49.png"
+              src="/logo_satap_situgede__2__96121c49.png"
               alt="Logo"
               referrerPolicy="no-referrer"
               className="w-4 h-4 object-contain inline-block"
@@ -375,7 +375,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center gap-2">
                 <img
-                  src="./logo_satap_situgede__2__96121c49.png"
+                  src="/logo_satap_situgede__2__96121c49.png"
                   alt="Logo SMPN Satu Atap Situgede"
                   referrerPolicy="no-referrer"
                   className="w-6 h-6 object-contain"
